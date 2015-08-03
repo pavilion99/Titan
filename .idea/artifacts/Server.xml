@@ -6,7 +6,7 @@
         <element id="file-copy" path="$PROJECT_DIR$/Titan Backup System Server/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="Titan Backup System Server" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/Server/mysql-connector-java-5.1.36-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Titan Backup System Server/resources/mysql-connector-java-5.1.36-bin.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
