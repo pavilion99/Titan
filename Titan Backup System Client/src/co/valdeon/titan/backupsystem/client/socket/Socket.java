@@ -43,10 +43,12 @@ public class Socket {
                 case "USR":
                     System.out.println("Submitting username...");
                     out.println(too[0]);
-                    return run(too[1]);
-                case "PSS":
+                    String next = in.readLine();
+                    if(!next.equals("PSS")) {
+                        break;
+                    }
                     System.out.println("Submitting password...");
-                    String password = too[0];
+                    String password = too[1];
                     try {
                         System.out.println(password);
                         MessageDigest md = MessageDigest.getInstance("MD5");
@@ -56,16 +58,17 @@ public class Socket {
                         for(byte b : digest) {
                             password += String.format("%02x", b & 0xff);
                         }
-                        System.out.println(password);
+                        out.println(password);
+                        this.currentValue.clear();
+                        this.currentValue.add(in.readLine());
+                        System.out.println(this.currentValue.get(0));
+                        return this.currentValue;
                     } catch (NoSuchAlgorithmException e) {
                         this.error = true;
                         this.errorMessage = e.getMessage();
+                        e.printStackTrace();
                         return null;
                     }
-                    out.println(password);
-                    this.currentValue.clear();
-                    this.currentValue.add(in.readLine());
-                    return this.currentValue;
                 case "DIR":
                     // Acknowledge Directory request
                     out.println("GO");
