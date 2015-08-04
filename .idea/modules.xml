@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Decryptor/Decryptor.iml" filepath="$PROJECT_DIR$/Decryptor/Decryptor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Encryptor/Encryptor.iml" filepath="$PROJECT_DIR$/Encryptor/Encryptor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Titan Backup System Client/Titan Backup System Client.iml" filepath="$PROJECT_DIR$/../Titan Backup System Client/Titan Backup System Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Titan Backup System Client/Titan Backup System Client.iml" filepath="$PROJECT_DIR$/Titan Backup System Client/Titan Backup System Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/Titan Backup System Server.iml" filepath="$PROJECT_DIR$/Titan Backup System Server.iml" />
     </modules>
   </component>

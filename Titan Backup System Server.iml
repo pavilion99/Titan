@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Titan Backup System Server/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/Titan Backup System Server/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="module-library" exported="" scope="RUNTIME">
       <library>
         <CLASSES>

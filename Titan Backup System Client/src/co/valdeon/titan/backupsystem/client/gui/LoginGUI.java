@@ -10,8 +10,8 @@ public class LoginGUI extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField usernameTextField;
-    private JPasswordField passwordPasswordField;
+    private JTextField username;
+    private JPasswordField password;
 
     public LoginGUI() {
         setContentPane(contentPane);
@@ -47,20 +47,24 @@ public class LoginGUI extends JDialog {
     }
 
     private void onOK() {
-        MainGUI.s = new Socket(Client.settings.getProperty("host"), Integer.parseInt(Client.settings.getProperty("port")), usernameTextField.getText(), new String(passwordPasswordField.getPassword()));
-// add your code here
+        Client.mainGUI.s = new Socket(Client.settings.getProperty("host"), Integer.parseInt(Client.settings.getProperty("port")));
+        String s = Client.mainGUI.s.run(username.getText(), new String(password.getPassword())).get(0);
+        if(s.equals("OK")) {
+            Client.mainGUI.setLoggedText("Logged In", true);
+        } else {
+            System.out.println(s);
+            Client.mainGUI.setLoggedText("Bad Username or Password", false);
+        }
         dispose();
     }
 
     private void onCancel() {
-// add your code here if necessary
         dispose();
     }
 
-    public static void main(String[] args) {
+    public void make() {
         LoginGUI dialog = new LoginGUI();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
     }
 }

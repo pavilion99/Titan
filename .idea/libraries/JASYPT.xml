@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="JASYPT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Encryptor/lib/jasypt-1.9.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
