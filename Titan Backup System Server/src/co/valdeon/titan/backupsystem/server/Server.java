@@ -8,12 +8,10 @@ import java.util.Properties;
 
 public class Server {
 
-    public static Properties settings;
-
     public static void main(String[] args) {
-        settings = new Settings().getProperties();
+        new Settings();
         try {
-            new Socket().open(Integer.parseInt(settings.getProperty("port")));
+            new Socket().open(Integer.parseInt(Settings.get("port")));
         } catch (IOException e) {
             e.printStackTrace();
         }
